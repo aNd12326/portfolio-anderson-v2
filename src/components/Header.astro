@@ -1,0 +1,17 @@
+---
+import HamburguerMenu from '../assets/hamburger-menu.svg';
+---
+
+<header class="container-custom py-6">
+    <nav class="flex justify-between items-center">
+        <h1 class="text-avocado-600">TAWAY</h1>
+        <img id="background" src={HamburguerMenu.src} alt="hamburguer menu" fetchpriority="high" class="md:hidden" width="50" />
+        <div class="hidden md:flex gap-x-11">
+            <a href="">Home</a>
+            <a href="">About</a>
+            <a href="">Skills</a>
+            <a href="">Projects</a>
+            <a href="">Contact</a>
+        </div>
+    </nav>
+</header>

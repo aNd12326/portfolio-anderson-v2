@@ -1,0 +1,58 @@
+---
+import fmcampsProject from "../assets/firstProject.avif";
+
+const projects = [
+    {
+        img: fmcampsProject.src,
+        title: "Fmcamps",
+        url: "https://www.fmcamps.com/",
+    },
+    {
+        img: fmcampsProject.src,
+        title: "SecondProject",
+        url: "https://www.fmcamps.com/",
+    },
+    {
+        img: fmcampsProject.src,
+        title: "Fmcamps",
+        url: "https://www.fmcamps.com/",
+    },
+    {
+        img: fmcampsProject.src,
+        title: "Fmcamps",
+        url: "https://www.fmcamps.com/",
+    },
+    {
+        img: fmcampsProject.src,
+        title: "Fmcamps",
+        url: "https://www.fmcamps.com/",
+    },
+    {
+        img: fmcampsProject.src,
+        title: "Fmcamps",
+        url: "https://www.fmcamps.com/",
+    },
+];
+
+---
+
+<section class="container-custom py-20 space-y-10">
+    <h2>Projects</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {
+            projects.map((project) => (
+                <div class="space-y-3">
+                    <a href={project.url} target="_blank">
+                        <img
+                            src={project.img}
+                            alt={project.title}
+                            class="rounded-xl"
+                            fetchpriority="high"
+                        />
+                    </a>
+                    <h4 class="text-center pt-2">{project.title}</h4>
+                </div>
+            ))
+        }
+    </div>
+</section>
