@@ -120,3 +120,41 @@ const Slider = [
         </div>
     </div>
 </section>
+
+<script>
+    const skillsContainer = document.getElementById("skills-container");
+    const arrowLeftButtons = document.querySelectorAll(".arrow-left"); // Selecciona todos los botones left
+    const arrowRightButtons = document.querySelectorAll(".arrow-right"); // Selecciona todos los botones right
+    const slides = document.querySelectorAll("#skills-container > div"); // Selecciona las tarjetas
+
+    let currentIndex = 0;
+    const slideWidth = slides[0].offsetWidth + 40; // Ancho de cada tarjeta + gap
+
+    function updateCarousel() {
+        skillsContainer.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+    }
+
+    arrowLeftButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateCarousel();
+                console.log("translateX -", currentIndex * slideWidth);
+            }
+        });
+    });
+
+    arrowRightButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+            if (currentIndex < slides.length - 1) {
+                currentIndex++;
+                updateCarousel();
+                console.log("translateX -", currentIndex * slideWidth);
+            }
+
+            if (slides.length - 1 === currentIndex) {
+                currentIndex = -1; // Intento de loop, pero con bug.
+            }
+        });
+    });
+</script>

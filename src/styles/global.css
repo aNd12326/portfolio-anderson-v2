@@ -54,6 +54,10 @@
     .container-custom {
         @apply max-w-7xl mx-auto px-4 md:p-0;
     }
+
+    .btn{
+        @apply bg-avocado-500 py-2 rounded-md px-4 border border-transparent text-center text-sm text-slate-800 transition-all shadow-md hover:shadow-lg focus:bg-green-700 focus:shadow-none active:bg-green-700 hover:bg-avocado-400 active:shadow-none cursor-pointer
+    }
 }
 
 .kanit-extralight {
