@@ -1,5 +1,6 @@
 ---
-import MiFoto from '../assets/mifoto.jpeg'
+import { Image } from 'astro:assets'
+import MiFoto from '../assets/mifoto2.avif'
 ---
 
 <section class="container-custom h-auto">
@@ -14,7 +15,7 @@ import MiFoto from '../assets/mifoto.jpeg'
         <div class="flex flex-col gap-6 justify-start text-center items-center">
             <!-- <p>Puede ir una imagen</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus eveniet quas facilis consequatur non, dolores, ipsam nemo animi molestias vero ex voluptatem cumque? A odit inventore, earum illo beatae voluptatem.</p> -->
-            <img src={MiFoto.src} alt="anderson foto" class="rounded-full" width="350" height="330">
+            <Image src={MiFoto} alt="anderson foto" class="rounded-full">
         </div>
     </div>
 </section>

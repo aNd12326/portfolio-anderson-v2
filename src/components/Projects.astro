@@ -1,34 +1,35 @@
 ---
+import { Image } from "astro:assets";
 import fmcampsProject from "../assets/firstProject.avif";
 
 const projects = [
     {
-        img: fmcampsProject.src,
+        img: fmcampsProject,
         title: "Fmcamps",
         url: "https://www.fmcamps.com/",
     },
     {
-        img: fmcampsProject.src,
+        img: fmcampsProject,
         title: "SecondProject",
         url: "https://www.fmcamps.com/",
     },
     {
-        img: fmcampsProject.src,
+        img: fmcampsProject,
         title: "Fmcamps",
         url: "https://www.fmcamps.com/",
     },
     {
-        img: fmcampsProject.src,
+        img: fmcampsProject,
         title: "Fmcamps",
         url: "https://www.fmcamps.com/",
     },
     {
-        img: fmcampsProject.src,
+        img: fmcampsProject,
         title: "Fmcamps",
         url: "https://www.fmcamps.com/",
     },
     {
-        img: fmcampsProject.src,
+        img: fmcampsProject,
         title: "Fmcamps",
         url: "https://www.fmcamps.com/",
     },
@@ -43,11 +44,10 @@ const projects = [
             projects.map((project) => (
                 <div class="space-y-3">
                     <a href={project.url} target="_blank">
-                        <img
+                        <Image
                             src={project.img}
                             alt={project.title}
                             class="rounded-xl"
-                            fetchpriority="high"
                         />
                     </a>
                     <h4 class="text-center pt-2">{project.title}</h4>
